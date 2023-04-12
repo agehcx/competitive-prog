@@ -1,16 +1,15 @@
 #include<bits/stdc++.h>
 using namespace std;
 #define INF 	1e18+7
-#define ll 		long long int
-#define pii		pair<ll,ll>
+#define ll 	long long int
+#define pii	pair<int,int>
 #define pll 	pair<ll,ll>
-
 int main() {
 	ios::sync_with_stdio(false);
 	cin.tie(NULL);
 	int m,n;
 	cin>>m>>n;
-	vector<pii> v[m+1];
+	vector<pll> v[m+1];
 	ll dist[m+1];
 	bool vis[m+1];
 	for(int i=0; i<n; i++) {
@@ -29,25 +28,25 @@ int main() {
 	}
 	for(int i=0; i<m+1; i++) {
 		dist[i] = INF;
+		vis[i] = false;
 	}
-  
-	priority_queue<pii,vector<pii>,greater<pii>> pq;
+	priority_queue<pll,vector<pll>,greater<pll>> pq;
 	dist[m] = 0;
-	pq.push({m,0});
-  
+	pq.push({0,m});
 	while(!pq.empty()) {
-		int f = pq.top().first;
-		int s = pq.top().second;
+		int f = pq.top().second;
+		int s = pq.top().first;
 		pq.pop();
+		if(vis[f]) continue;
+		vis[f] = true;
 		for(auto &e : v[f]) {
 			int i = e.first;
-			int j = e.second;
+			int j = e.second;	
 			if(s+j < dist[i]) {
 				dist[i] = s+j;
-				pq.push({i,s+j});
+				pq.push({s+j,i});
 			}
 		}
 	}
-  
 	cout<<dist[0];
 } 
