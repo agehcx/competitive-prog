@@ -11,14 +11,13 @@ int main() {
     int n,w,sz,cnt;
     string x;
     cin>>n;
-	  int vl[26];
+    int vl[26];
     for(int tc=0; tc<n; tc++) {
         vector<string> v;
         for(int i=0; i<26; i++) {
             cin>>vl[i];
         }
         cin>>w;
-      
         for(int i=0; i<w; i++) {
     	    string tonum = "";
     	    cin>>x;
@@ -27,26 +26,24 @@ int main() {
     	    }
     	    v.push_back(tonum);
     	}
-      
-      sz = v.size();
-      cnt = 0;
-      bool Collision = false;
+	    sz = v.size();
+	    cnt = 0;
+	    bool Collision = false;
     	set<string> seen;
+	    for(string e:v) {
+	    	if(seen.count(e)>0) {
+	    		Collision=true;
+	    		break;
+			}
+			seen.insert(e);
+		}
       
-    	for(string e:v) {
-    		if(seen.count(e)>0) {
-    			Collision=true;
-    			break;
-        }
-        seen.insert(e);
-		  }
-      
-      cout<<"Case #"<<tc+1<<": ";
-      if(Collision) {
-          cout<<"YES\n";
-      }
-      else {
-          cout<<"NO\n";
-      }
-   }
+      	cout<<"Case #"<<tc+1<<": ";
+	    if(Collision) {
+	        cout<<"YES\n";
+	    }
+	    else {
+	        cout<<"NO\n";
+      	}
+   	}
 }
