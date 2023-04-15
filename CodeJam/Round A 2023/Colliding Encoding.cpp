@@ -30,20 +30,20 @@ int main() {
 	    cnt = 0;
 	    bool Collision = false;
     	set<string> seen;
-	    for(string e:v) {
-	    	if(seen.count(e)>0) {
-	    		Collision=true;
-	    		break;
-			}
-			seen.insert(e);
+	for(string e:v) {
+	    if(seen.count(e)>0) {
+	    	Collision=true;
+	    	break;
 		}
+	    seen.insert(e);
+	}
       
-      	cout<<"Case #"<<tc+1<<": ";
-	    if(Collision) {
-	        cout<<"YES\n";
-	    }
-	    else {
-	        cout<<"NO\n";
-      	}
-   	}
+      cout<<"Case #"<<tc+1<<": ";
+	  if(Collision) {
+	      cout<<"YES\n";
+	  }
+	  else {
+	      cout<<"NO\n";
+      }
+   }
 }
