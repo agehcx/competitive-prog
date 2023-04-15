@@ -38,12 +38,12 @@ int main() {
 	    seen.insert(e);
 	}
       
-      cout<<"Case #"<<tc+1<<": ";
-	  if(Collision) {
-	      cout<<"YES\n";
-	  }
-	  else {
-	      cout<<"NO\n";
-      }
-   }
+        cout<<"Case #"<<tc+1<<": ";
+	if(Collision) {
+	   cout<<"YES\n";
+	}
+	else {
+	   cout<<"NO\n";
+        }
+    }
 }
