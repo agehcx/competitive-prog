@@ -25,10 +25,10 @@ int main() {
     	        tonum += vl[x[j]-'A']+'0';
     	    }
     	    v.push_back(tonum);
-    	}
-	    sz = v.size();
-	    cnt = 0;
-	    bool Collision = false;
+    	    }
+	sz = v.size();
+	cnt = 0;
+	bool Collision = false;
     	set<string> seen;
 	for(string e:v) {
 	    if(seen.count(e)>0) {
