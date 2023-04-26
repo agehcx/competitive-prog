@@ -1,4 +1,2 @@
-# Competitive-Prog
-Competitive Programming Codes
+# Competitive Programming
 
-# All of my submitted codes
