@@ -2,7 +2,7 @@
 using namespace std;
 
 #define INF	1e9+7
-#define ll  long long
+#define ll      long long
 #define pii	pair<int,int>
 
 int dx[] = {0,-1,0,1};
