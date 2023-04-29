@@ -20,7 +20,7 @@ int main() {
 	int w,l;
 	cin>>w>>l;
 	int light[w][l];
-	memset(light,false,sizeof(lSight));
+	memset(light,false,sizeof(light));
 	for(int i=0; i<w; i++) {
 		string str;
 		cin>>str;
