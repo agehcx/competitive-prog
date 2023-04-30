@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
+
 bool s[50002][72];
+
 int main() {
 	cin.tie(nullptr)->std::ios_base::sync_with_stdio(false);
 	int x;
