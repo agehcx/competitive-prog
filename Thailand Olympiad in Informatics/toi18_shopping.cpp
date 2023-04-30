@@ -24,10 +24,10 @@ int main() {
 		cin>>st>>pt;
 		auto idx = lower_bound(qs2+st,qs2+m,pt+qs2[st])-qs2;
 		if(st==0) {
-	      cout<<qs1[idx]<<'\n';
-	    }
+	      		cout<<qs1[idx]<<'\n';
+	    	}
 		else {
-	      cout<<qs1[idx] - qs1[st]<<'\n';
+	      		cout<<qs1[idx] - qs1[st]<<'\n';
 		}
 	}
 }
