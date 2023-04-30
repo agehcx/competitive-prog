@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-#define INF	1e9+7
+#define INF 1e9+7
 #define ll long long
 #define pii pair<int,int>
 
