@@ -1,9 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 typedef unsigned long long int ull;
 const int N=1e7;
 vector<bool> prime(N+1, true);
 ull p[N], x, cnt=1;
+
 int main() {
     cin >> x;
     p[0] = 2;
