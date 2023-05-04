@@ -3,8 +3,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main()
-{
+int main() {
 	int n;
 	cin>>n;
 	queue<pair<long,int>> q;
@@ -30,31 +29,31 @@ int main()
 		cout<<"Not Found";
 	}
   	else {
-    if(spc==1) {
-      	cout<<"Position: ";
-      	while(!q.empty()) {
-        	if(q.front().first==fnd) {
-          		cout<<q.front().second;
-          		break;
-        	}	
-        	q.pop();
-      	}
-    	}
-    else {
-      	int cnt=1;
-      	cout<<"Position: ";
-      	while(!q.empty()) {
-        	if(q.front().first==fnd) {
-          		cout<<q.front().second;
-          		if(cnt!=spc) {
-            		cout<<',';
-          		}
-          	cnt++;
-        	}
-        q.pop();
-      }
-    }
-  }
+		if(spc==1) {
+			cout<<"Position: ";
+			while(!q.empty()) {
+				if(q.front().first==fnd) {
+					cout<<q.front().second;
+					break;
+				}	
+				q.pop();
+			}
+		}
+		else {
+			int cnt=1;
+			cout<<"Position: ";
+			while(!q.empty()) {
+				if(q.front().first==fnd) {
+					cout<<q.front().second;
+					if(cnt!=spc) {
+					cout<<',';
+					}
+				cnt++;
+				}
+			q.pop();
+			}
+		}
+	}
 }
 
 //Tips:  Run for check input format
