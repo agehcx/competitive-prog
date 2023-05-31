@@ -10,34 +10,32 @@ int dy[] = {1,0,-1,0};
 
 int n,m;
 
-int fill(int i, int j) {
-  if(i<0 || i>=n || j<0 || j>=m || x[i][j]=='.') return 0;
-  x[i][j] = '.';
-  for(int Q=0; Q<4; Q++) {
-    fill(i+dx[Q],j+dy[Q]);
-  }
+int dfs(int i, int j) {
+    if(i<0 || i>=n || j<0 || j>=m || x[i][j]=='.') return 0;
+    x[i][j] = '.';
+    for(int Q=0; Q<4; Q++) {
+        dfs(i+dx[Q],j+dy[Q]);
+    }
 }
 
 int main() {
-  ios::sync_with_stdio(false);
-  cin.tie(nullptr);
-  cin>>n>>m;
-  memset(x,'.',sizeof(x));
-  for(int i=0; i<n; i++) {
-    for(int j=0; j<m; j++) {
-      cin>>x[i][j];
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cin>>n>>m;
+    memset(x,'.',sizeof(x));
+    for(int i=0; i<n; i++) {
+        for(int j=0; j<m; j++) {
+        cin>>x[i][j];
+        }
     }
-  }
-  int cnt=0;
-  for(int i=0; i<n; i++) {
-    for(int j=0; j<m; j++) {
-      if(x[i][j]=='#') {
-        cnt++;
-        fill(i,j);
-      }
+    int cnt=0;
+    for(int i=0; i<n; i++) {
+        for(int j=0; j<m; j++) {
+            if(x[i][j]=='#') {
+                cnt++;
+                dfs(i,j);
+            }
+        }
     }
-  }
-  cout<<cnt;
+    cout<<cnt;
 }
-
-//Tips:  Run for check input format
