@@ -14,7 +14,7 @@ unsigned long long fac(int n) {
 
 int main()
 {
-	string a;
+    string a;
     cin>>a;
  	unsigned mem[26];
     memset(mem,0,sizeof(mem));
