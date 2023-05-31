@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-	priority_queue<pair<double,string>,vector<pair<double,string>>,greater<pair<double,string>>> pq;
+    priority_queue<pair<double,string>,vector<pair<double,string>>,greater<pair<double,string>>> pq;
     priority_queue<int,vector<int>,greater<int>> pq2;
     int x;
     cin >> x;
