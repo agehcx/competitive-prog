@@ -4,8 +4,8 @@
 using namespace std;
 
 #define INF 	1e9+7
-#define ll 		long long
-#define pii		pair<int,int>
+#define ll 	long long
+#define pii	pair<int,int>
 
 int bt[15] = {};
 int light[15] = {};
