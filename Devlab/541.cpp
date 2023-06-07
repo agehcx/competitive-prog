@@ -16,7 +16,7 @@ int main() {
     cin >> n;
     const long long inp = n;
     for(int i=4; i<=n; i+=2) prime[i] = false;
-    for(int i =3; i<=n; i+=2) {
+    for(int i=3; i<=n; i+=2) {
         if(pime[i]) {
             for(int j=i*i; j<=n; j+=i+i) {
                 prime[j] = false;
