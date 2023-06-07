@@ -17,7 +17,7 @@ int main()
     for(int j=0; j<i; j++) {
         dp[i][j] = dp[i-1][j] + dp[i-1][j-1];  
     }}
-	  int N; cin>>N;
+    int N; cin>>N;
     int cx = N; int cy = 0;
     for(int i=0; i<N+1; i++) {
       if(dp[N+1][i]!=1) cout<<dp[N+1][i];
