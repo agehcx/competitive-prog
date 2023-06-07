@@ -1,5 +1,3 @@
-/* https://www.borntodev.com/devlab/task/935 */
-
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -17,17 +15,17 @@ int main()
     for(int j=0; j<i; j++) {
         dp[i][j] = dp[i-1][j] + dp[i-1][j-1];  
     }}
-    int N; cin>>N;
+	int N; cin>>N;
     int cx = N; int cy = 0;
     for(int i=0; i<N+1; i++) {
-      if(dp[N+1][i]!=1) cout<<dp[N+1][i];
-      if(cx!=0) { cout<<'x';
-        if(cx!=1) cout<<'^'<<cx;
-      }
-      if(cy!=0) { cout<<'y';
-        if(cy!=1) cout<<'^'<<cy;
-      }        
-      cx--;cy++;
-      if(i!=N)cout<<" + ";
+      	if(dp[N+1][i]!=1) cout<<dp[N+1][i];
+      	if(cx!=0) { cout<<'x';
+        	if(cx!=1) cout<<'^'<<cx;
+      	}
+      	if(cy!=0) { cout<<'y';
+        	if(cy!=1) cout<<'^'<<cy;
+      	}        
+      	cx--;cy++;
+      	if(i!=N)cout<<" + ";
     }
 }
