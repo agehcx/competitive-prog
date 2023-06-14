@@ -1,2 +1,2 @@
 /* https://beta.programming.in.th/tasks/codecube_188 */
-/* ALGOS : BINARY INDEX TREE (FENWICK TREE) */
+/* Algos : Binary Index Tree (Fenwick Tree) */
