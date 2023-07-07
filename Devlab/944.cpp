@@ -21,7 +21,7 @@ bool isAbundantNumber(int Number) {
 
 void precompute() {
     for (int i = 2; i <= MAXN; i++) {
-		if (!prime[i] && isAbundantNumber(i)) {
+	if (!prime[i] && isAbundantNumber(i)) {
             abundant[i] = true;
         }
     }
