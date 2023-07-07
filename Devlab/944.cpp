@@ -21,8 +21,7 @@ bool isAbundantNumber(int Number) {
 
 void precompute() {
     for (int i = 2; i <= MAXN; i++) {
-        if (prime[i]) continue;
-		if (isAbundantNumber(i)) {
+		if (!prime[i] && isAbundantNumber(i)) {
             abundant[i] = true;
         }
     }
@@ -44,7 +43,7 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 	
-	sieveOfEratosthenes();
+    sieveOfEratosthenes();
 	precompute();
 	
     int Q;
@@ -61,6 +60,6 @@ int main() {
 
         cout << count << '\n';
     }
-    
+	
     // Time complexity : O(Q * R)
 }
