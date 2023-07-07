@@ -21,7 +21,7 @@ bool isAbundantNumber(int Number) {
 
 void precompute() {
     for (int i = 2; i <= MAXN; i++) {
-	if (!prime[i] && isAbundantNumber(i)) {
+		if (!prime[i] && isAbundantNumber(i)) {
             abundant[i] = true;
         }
     }
@@ -44,18 +44,19 @@ int main() {
     cin.tie(nullptr);
 	
     sieveOfEratosthenes();
-precompute();
+	precompute();
 	
     int Q;
     cin >> Q;
 
     while (Q--) {
+    	
         int count = 0;
         int L, R;
         cin >> L >> R;
 
         for (int i = L; i <= R; i++) {
-            if(abundant[i]) count++;
+            if (abundant[i]) count++;
         }
 
         cout << count << '\n';
