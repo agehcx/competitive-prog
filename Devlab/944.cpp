@@ -44,7 +44,7 @@ int main() {
     cin.tie(nullptr);
 	
     sieveOfEratosthenes();
-	precompute();
+precompute();
 	
     int Q;
     cin >> Q;
