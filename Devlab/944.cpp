@@ -51,7 +51,7 @@ int main() {
     cin.tie(nullptr);
 	
     sieveOfEratosthenes();
-	preCompute();
+    preCompute();
     prefixSum();
 	
     int Q;
