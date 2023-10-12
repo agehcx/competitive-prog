@@ -16,8 +16,8 @@ int main() {
 				sd[i][j] = x[j-1] - '0';
 			}
 		}
-		for(int i=1; i<=9; i++) {
-			for(int j=1; j<=9; j++) {
+		for (int i = 1; i <= 9;	i++) {
+			for (int j = 1; j <= 9; j++) {
 				if(sd[i][j]==0) {
 					int mem[10];
 					int mem2[10];

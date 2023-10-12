@@ -7,11 +7,9 @@ public:
             if(idx=='A') {
                 totalAbsent++; 
                 ConsecutiveLate = 0;
-            }
-            else if(idx=='L') {
+            } else if(idx=='L') {
                 ConsecutiveLate++;
-            }
-            else ConsecutiveLate = 0;
+            } else ConsecutiveLate = 0;
             if(totalAbsent>1 || ConsecutiveLate>2) return false;
         }
         return true;
