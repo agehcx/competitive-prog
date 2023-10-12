@@ -24,4 +24,10 @@ __pycache__/
 node_modules/
 
 # Environment configuration file
+.cph/
+*.prob
 .env
+.editorconfig
+
+# tempCodeRunner
+tempCodeRunner.cpp
