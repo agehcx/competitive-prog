@@ -24,6 +24,8 @@ __pycache__/
 node_modules/
 
 # Environment configuration file
+*.cph
+*.cph/
 .cph/
 *.prob
 .env
