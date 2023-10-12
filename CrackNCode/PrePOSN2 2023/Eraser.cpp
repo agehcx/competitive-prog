@@ -35,8 +35,6 @@ int main() {
 			long double vf = v.front().first.second;
 			ull int vs = v.front().second;
 			ull int pot = pow(2,vs);
-			//cout<<er<<" "<<vf<<" "<<vs<<" "<<pot<<"\n";
-			//cout<<(er/pot)*(pot*vf)<<" "<<(er/pot)<<"\n";
 			cnt += (er/pot)*(vf);
 			er = er - (er/pot)*pot;
 			v.erase(v.begin());

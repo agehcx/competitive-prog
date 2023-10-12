@@ -1,5 +1,4 @@
 ## https://www.borntodev.com/devlab/task/932 ##
-## Python sol
 
 import math
 
