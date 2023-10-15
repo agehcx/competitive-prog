@@ -4,7 +4,7 @@ using namespace std;
 #define INF 1e9+7
 #define ll 	long long 
 
-int mv[100005] = {};
+int mv[100005] = {0};
 int MxW = 0;
 
 bool chk(int i, int lc) {
@@ -47,5 +47,5 @@ int main() {
 			}
 		}
 		cout << cyc << "\n";
-	}
+	}	
 }

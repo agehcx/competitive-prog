@@ -38,6 +38,7 @@ int main() {
 		}
 		pq.pop();
 	}
+
 	while(!pq2.empty()) {
 		int S = pq2.top().first;
 		int H = pq2.top().second;
