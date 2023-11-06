@@ -19,4 +19,4 @@ def Circle(c, r):
     else: return res
 
 if __name__ == "__main__":
-    print(Circle(5,5))
+    print(Circle(0,0))
