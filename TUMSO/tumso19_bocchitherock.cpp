@@ -4,12 +4,10 @@ using namespace std;
 #define ll long long int
 #define pii pair<int, int>
 #define pll pair<ll, ll>
-int main()
-{
+int main() {
 	ios::sync_with_stdio(false);
 	cin.tie(NULL);
-	int m, n;
-	cin >> m >> n;
+	int m, n; cin >> m >> n;
 	vector<pll> v[m + 1];
 	ll dist[m + 1];
 	bool vis[m + 1];
@@ -21,8 +19,7 @@ int main()
 	}
 	int ap; cin >> ap;
 	for (int i = 0; i < ap; i++) {
-		int w, x;
-		cin >> w >> x;
+		int w, x; cin >> w >> x;
 		v[m].push_back({w, x});
 		v[w].push_back({m, x});
 	}
@@ -37,13 +34,12 @@ int main()
 		int f = pq.top().second;
 		int s = pq.top().first;
 		pq.pop();
-		if (vis[f])
-			continue;
+		if (vis[f]) continue;
 		vis[f] = true;
-		for (auto &e : v[f]) {
+		for (auto& e : v[f]) {
 			int i = e.first;
 			int j = e.second;
-			if (s + j < dist[i]) {
+			if (!vis[i] && s + j < dist[i]) {
 				dist[i] = s + j;
 				pq.push({s + j, i});
 			}
